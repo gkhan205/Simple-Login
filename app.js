@@ -12,13 +12,22 @@ const options = {
     // If not connected, return errors immediately rather than waiting for reconnect
     bufferMaxEntries: 0
 };
-mongoose.connect('mongodb://localhost:27017/react-game', options, function (err, conn) {
+
+mongoose.connect('mongodb://ghazi:ghazi@ds129946.mlab.com:29946/mb-login', options, function (err, conn) {
     if (err) {
         console.log('DB Not Connected ' + err);
     } else {
         console.log('DB Connected');
     }
 });
+
+// mongoose.connect('mongodb://localhost:27017/react-game', options, function (err, conn) {
+//     if (err) {
+//         console.log('DB Not Connected ' + err);
+//     } else {
+//         console.log('DB Connected');
+//     }
+// });
 
 const app = express();
 
